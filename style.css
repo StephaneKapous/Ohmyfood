@@ -67,6 +67,10 @@ body {
 
 /************ Fonctionnement ***********/
 
+.fonction {
+  font-size: 30px;
+  font-size: bold;
+}
 .use {
   display: flex;
   flex-direction: column;
@@ -89,6 +93,8 @@ body {
 
 .useBtn i {
   padding-left: 20px;
+  color: grey;
+  font-size: 25px;
 }
 
 .useBtn p {
@@ -98,7 +104,7 @@ body {
 
 .numb {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
 }
 .numb > p {
