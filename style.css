@@ -4,6 +4,11 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /********** Logo *********/
 
 .logo img {
@@ -73,6 +78,7 @@ body {
   font-size: 30px;
   font-size: bold;
   padding-left: 15px;
+  color: black;
 }
 .use {
   display: flex;
@@ -94,6 +100,26 @@ body {
   background-color: rgb(246, 245, 247);
 }
 
+.useBtnpurple {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: center;
+  border: grey;
+  border-radius: 40px;
+  margin: 15px;
+  padding: 15px;
+  margin-left: -23px;
+  min-width: 400px;
+  background-color: rgb(234, 222, 245);
+}
+
+.useBtnpurple i {
+  padding-left: 20px;
+  color: #9356dc;
+  font-size: 25px;
+}
+
 .useBtn i {
   padding-left: 20px;
   color: grey;
@@ -101,6 +127,10 @@ body {
 }
 
 .useBtn p {
+  font-size: 25px;
+  padding-left: 20px;
+}
+.useBtnpurple p {
   font-size: 25px;
   padding-left: 20px;
 }
@@ -130,6 +160,8 @@ body {
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 70px;
+  margin-top: 70px;
 }
 .restau h2 {
   font-size: 30px;
@@ -140,6 +172,23 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
+  position: relative;
+}
+
+.new {
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  background-color: #99e2d0;
+  color: green;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.new p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
 .Restau img {
@@ -168,12 +217,106 @@ body {
 footer {
   background-color: rgb(55, 55, 55);
   color: white;
-  padding-left: 15px;
-  padding-top: 50px;
+  padding-left: 30px;
   padding-bottom: 20px;
 }
 
+.footTexte {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  line-height: 1px;
+}
+
+.iconeFooter {
+  display: flex;
+  align-items: center;
+}
+
+.iconeFooter i {
+  padding-right: 15px;
+}
 .footLogo {
   color: white;
-  size: 20%;
+  font-family: Shrikhand;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+/**************** Menu *****************/
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logoMenu img {
+}
+
+.restauMenu {
+  background-color: rgb(239, 238, 238);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.titleMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 35px;
+  padding-left: 30px;
+  font-size: 25px;
+}
+
+.titleMenu > h2 {
+  font-family: Shrikhand;
+}
+
+h3 {
+  color: rgb(165, 163, 163);
+}
+
+.menu {
+  border-radius: 20px;
+  margin: 15px;
+  padding-left: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  width: 350px;
+  background-color: white;
+}
+
+.imgMenu img {
+  height: 300px;
+  min-width: 500px;
+}
+
+.titleMenu > h2 {
+  font-family: Shrikhand;
+}
+
+.containerBtn {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnMenu {
+  padding: 15px;
+  font-size: 15px;
+  padding-right: 50px;
+  padding-left: 50px;
+  border-radius: 30px;
+  margin-top: 20px;
+  color: white;
+  background: linear-gradient(175deg, #ff79da, #9356dc);
 }
