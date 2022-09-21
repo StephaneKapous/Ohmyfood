@@ -34,6 +34,25 @@ a {
 .search i {
   padding-right: 10px;
 }
+
+.fas {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+.fas:hover {
+  animation-name: fas;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fas {
+  100% {
+    color: white;
+  }
+}
+
 .map {
   display: flex;
   flex-direction: row;
@@ -66,12 +85,19 @@ a {
 }
 
 .btn {
+  border: none;
   font-size: 20px;
   border-radius: 30px;
   padding: 15px;
   margin-top: 20px;
   color: white;
   background: linear-gradient(175deg, #ff79da, #9356dc);
+  box-shadow: 1px 3px 10px 1px rgb(153 153 153);
+}
+
+input:hover {
+  box-shadow: 1px 3px 2px 5px rgb(74, 74, 74);
+  background: linear-gradient(175deg, #fe9ce3, #a478da);
 }
 
 /************ Fonctionnement ***********/
@@ -98,28 +124,18 @@ a {
   margin: 15px;
   padding: 15px;
   margin-left: -23px;
-  min-width: 400px;
+  margin-right: 23px;
+  width: 80%;
+
   background-color: rgb(246, 245, 247);
 }
 
-.useBtnpurple {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-items: center;
-  border: grey;
-  border-radius: 40px;
-  margin: 15px;
-  padding: 15px;
-  margin-left: -23px;
-  min-width: 400px;
+.purple {
   background-color: rgb(234, 222, 245);
 }
 
-.useBtnpurple i {
-  padding-left: 20px;
+.purple i {
   color: #9356dc;
-  font-size: 25px;
 }
 
 .useBtn i {
@@ -132,15 +148,12 @@ a {
   font-size: 25px;
   padding-left: 20px;
 }
-.useBtnpurple p {
-  font-size: 25px;
-  padding-left: 20px;
-}
 
 .numb {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  width: 100%;
 }
 .numb > p {
   font-size: 20px;
@@ -342,9 +355,10 @@ h3 {
 
 .imgMenu img {
   height: 300px;
-  min-width: 500px;
   z-index: 0;
   position: relative;
+  width: 100%;
+  object-fit: cover;
 }
 
 .titleMenu > h2 {
