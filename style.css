@@ -35,16 +35,31 @@ a {
   padding-right: 10px;
 }
 
-.fas {
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.Heart {
+  font-size: 36px;
+  position: absolute;
+  transform: scale(0);
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 2;
 }
-.fas:hover {
+
+.heart:hover .fas {
+  transform-origin: bottom;
+  transform: scale(0.9);
+  transition: transform 1000ms;
   animation-name: fas;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
+}
+.far {
+  font-size: 30px;
+  line-height: none;
+  position: relative;
+  z-index: 1;
+  top: 5px;
+  left: 3px;
 }
 
 @keyframes fas {
@@ -210,7 +225,7 @@ input:hover {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   height: 200px;
-  min-width: 350px;
+  min-width: 300px;
   object-fit: cover;
 }
 
@@ -320,7 +335,9 @@ h3 {
   align-items: center;
 }
 
-.menu {
+.subMenu {
+  overflow: hidden;
+  position: relative;
   border-radius: 20px;
   margin: 15px;
   padding-left: 10px;
@@ -383,4 +400,163 @@ h3 {
   margin-top: 20px;
   color: white;
   background: linear-gradient(175deg, #ff79da, #9356dc);
+}
+
+/******* Animation ***********/
+
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 6s linear;
+  animation-fill-mode: forwards;
+}
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 55px solid blueviolet;
+  animation: prixClipFix 5s linear infinite;
+}
+.colorLoad {
+  animation: colorr 1s backwards;
+  animation-delay: 5s;
+}
+
+@keyframes colorr {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    visibility: hidden;
+    opacity: 0;
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+.subMenu1 {
+  animation: fadein 1s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.subMenu2 {
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.subMenu3 {
+  animation: fadein 3s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/**** responsive *********/
+
+@media screen and (min-width: 768px) {
+  .use {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .responsiveRestau {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .Restau img {
+    height: 250px;
+    min-width: 480px;
+  }
+
+  .carteMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.check {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  background: #99e2d0;
+  height: 100%;
+  width: 50px;
+  color: white;
+}
+
+.subMenu:hover .check {
+  transition: right 0.5s;
+  right: 0;
+}
+
+.subMenu:hover .checkI {
+  animation: checkAnim 1s ease;
+}
+@keyframes checkAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
