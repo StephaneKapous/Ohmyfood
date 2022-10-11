@@ -2,6 +2,8 @@ body {
   font-family: "Roboto";
   margin: 0;
   padding: 0;
+  max-width: 1500px;
+  margin: auto;
 }
 
 a {
@@ -168,7 +170,7 @@ input:hover {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  width: 100%;
+  max-width: 400px;
 }
 .numb > p {
   font-size: 20px;
@@ -225,7 +227,6 @@ input:hover {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   height: 200px;
-  min-width: 300px;
   object-fit: cover;
 }
 
@@ -508,33 +509,6 @@ h3 {
   }
 }
 
-/**** responsive *********/
-
-@media screen and (min-width: 768px) {
-  .use {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .responsiveRestau {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .Restau img {
-    height: 250px;
-    min-width: 480px;
-  }
-
-  .carteMenu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
 .check {
   display: flex;
   align-items: center;
@@ -565,5 +539,43 @@ h3 {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/**** responsive *********/
+
+@media screen and (min-width: 768px) {
+  .use {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .responsiveRestau {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .Restau img {
+    height: 250px;
+    min-width: 480px;
+  }
+
+  .carteMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Restau img {
+    min-width: 375px;
+  }
+}
+
+@media screen and (min-width: 1165px) {
+  .Restau img {
+    min-width: 500px;
   }
 }
