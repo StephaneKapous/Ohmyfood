@@ -366,6 +366,7 @@ h3 {
 }
 
 .prix p {
+  text-overflow: ellipsis;
   padding-right: 15px;
   margin-top: 8px;
 }
@@ -535,13 +536,19 @@ h3 {
 }
 
 .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 0;
-  right: -50px;
+  right: -70px;
   background: #99e2d0;
   height: 100%;
-  width: 50px;
+  width: 70px;
   color: white;
+}
+.check i {
+  font-size: 30px;
 }
 
 .subMenu:hover .check {
