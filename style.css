@@ -55,6 +55,7 @@ a {
   animation-duration: 500ms;
   animation-fill-mode: forwards;
 }
+
 .far {
   font-size: 30px;
   line-height: none;
@@ -125,6 +126,7 @@ input:hover {
   padding-left: 15px;
   color: black;
 }
+
 .use {
   display: flex;
   flex-direction: column;
@@ -143,7 +145,6 @@ input:hover {
   margin-left: -23px;
   margin-right: 23px;
   width: 80%;
-
   background-color: rgb(246, 245, 247);
 }
 
@@ -172,6 +173,7 @@ input:hover {
   align-items: center;
   max-width: 400px;
 }
+
 .numb > p {
   font-size: 20px;
   border: solid #9356dc;
@@ -195,6 +197,7 @@ input:hover {
   padding-bottom: 70px;
   margin-top: 70px;
 }
+
 .restau h2 {
   font-size: 30px;
   padding-top: 20px;
@@ -218,6 +221,7 @@ input:hover {
   border-radius: 5px;
   font-size: 18px;
 }
+
 .new p {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
@@ -269,6 +273,7 @@ footer {
   height: 13px;
   width: 16px;
 }
+
 .footLogo {
   color: white;
   font-family: Shrikhand;
@@ -293,8 +298,7 @@ footer {
   flex-direction: row;
   align-items: center;
 }
-.logoMenu img {
-}
+
 /***************** carte *************/
 
 .Carte {
@@ -411,6 +415,7 @@ h3 {
   top: 50%;
   left: 50%;
 }
+
 .loader {
   width: 48px;
   height: 48px;
@@ -419,6 +424,7 @@ h3 {
   animation: rotate 6s linear;
   animation-fill-mode: forwards;
 }
+
 .loader::before {
   content: "";
   box-sizing: border-box;
@@ -428,6 +434,7 @@ h3 {
   border: 55px solid blueviolet;
   animation: prixClipFix 5s linear infinite;
 }
+
 .colorLoad {
   animation: colorr 1s backwards;
   animation-delay: 5s;
@@ -441,6 +448,7 @@ h3 {
     opacity: 0;
   }
 }
+
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
@@ -476,6 +484,7 @@ h3 {
 .subMenu1 {
   animation: fadein 1s;
 }
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -488,6 +497,7 @@ h3 {
 .subMenu2 {
   animation: fadein 2s;
 }
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -500,6 +510,7 @@ h3 {
 .subMenu3 {
   animation: fadein 3s;
 }
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -521,6 +532,7 @@ h3 {
   width: 70px;
   color: white;
 }
+
 .check i {
   font-size: 30px;
 }
@@ -530,9 +542,20 @@ h3 {
   right: 0;
 }
 
+.subMenu:hover .plat,
+.subMenu:hover .accompagnement {
+  text-overflow: ellipsis;
+  direction: ltr;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 290px;
+  transition: all 0.5s;
+}
+
 .subMenu:hover .checkI {
   animation: checkAnim 1s ease;
 }
+
 @keyframes checkAnim {
   from {
     transform: rotate(0deg);
@@ -541,6 +564,7 @@ h3 {
     transform: rotate(360deg);
   }
 }
+
 /**** responsive *********/
 
 @media screen and (min-width: 768px) {
@@ -548,19 +572,16 @@ h3 {
     display: flex;
     flex-direction: row;
   }
-
   .responsiveRestau {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-
   .Restau img {
     height: 250px;
     min-width: 480px;
   }
-
   .carteMenu {
     display: flex;
     flex-direction: row;
