@@ -149,19 +149,20 @@ input:hover {
 }
 
 .purple {
-  background-color: rgb(234, 222, 245);
-}
-
-.purpleColor {
-  color: #9356dc;
+  background-color: rgb(70, 60, 80);
 }
 
 .useBtn i {
   padding-left: 20px;
-  color: grey;
   font-size: 25px;
 }
 
+.greyColor {
+  color: grey;
+}
+.purpleColor {
+  color: #9356dc;
+}
 .useBtn p {
   font-size: 20px;
   padding-left: 20px;
