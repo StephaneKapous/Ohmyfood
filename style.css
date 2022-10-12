@@ -34,7 +34,7 @@ a {
 }
 
 .search i {
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 .Heart {
@@ -143,8 +143,8 @@ input:hover {
   margin: 15px;
   padding: 15px;
   margin-left: -23px;
-  margin-right: 23px;
-  width: 80%;
+  margin-right: 45px;
+  width: 70%;
   background-color: rgb(246, 245, 247);
 }
 
@@ -152,7 +152,7 @@ input:hover {
   background-color: rgb(234, 222, 245);
 }
 
-.purple i {
+.purpleColor {
   color: #9356dc;
 }
 
@@ -163,7 +163,7 @@ input:hover {
 }
 
 .useBtn p {
-  font-size: 25px;
+  font-size: 20px;
   padding-left: 20px;
 }
 
@@ -171,7 +171,7 @@ input:hover {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  max-width: 400px;
+  min-width: 450px;
 }
 
 .numb > p {
@@ -571,6 +571,8 @@ h3 {
   .use {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .responsiveRestau {
     display: flex;
