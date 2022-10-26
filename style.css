@@ -300,6 +300,13 @@ footer {
   align-items: center;
 }
 
+.borderTitle {
+  border: solid #99e2d0 2px;
+  width: 45px;
+  margin-left: 20px;
+  margin-top: -15px;
+}
+
 /***************** carte *************/
 
 .Carte {
@@ -351,12 +358,20 @@ h3 {
   padding-bottom: 1px;
   width: 350px;
   background-color: white;
-  line-height: 0px;
+  font-size: 22px;
 }
 
 .plat {
   padding-top: 5px;
   font-size: 20px;
+}
+
+.plat p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 7px;
+  margin-bottom: 5px;
 }
 
 .accompagnement {
@@ -367,14 +382,22 @@ h3 {
 
 .accompagnementStyle {
   color: grey;
-  line-height: 0px;
-  margin-top: 6px;
+  line-height: 25px;
+  margin-top: 10px;
+  font-size: 15px;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 0px;
 }
 
-.prix p {
+.prix {
   text-overflow: ellipsis;
   padding-right: 15px;
-  margin-top: 8px;
+  font-size: 15px;
+  line-height: 25px;
+  margin-top: 0;
 }
 
 .imgMenu img {
@@ -527,7 +550,7 @@ h3 {
   justify-content: center;
   position: absolute;
   top: 0;
-  right: -70px;
+  right: -92px;
   background: #99e2d0;
   height: 100%;
   width: 70px;
@@ -535,12 +558,16 @@ h3 {
 }
 
 .check i {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .subMenu:hover .check {
   transition: right 0.5s;
   right: 0;
+}
+
+.subMenu:hover .accompagnementStyle {
+  width: 250px;
 }
 
 .subMenu:hover .plat,
@@ -549,7 +576,7 @@ h3 {
   direction: ltr;
   white-space: nowrap;
   overflow: hidden;
-  width: 290px;
+  width: 288px;
   transition: all 0.5s;
 }
 
