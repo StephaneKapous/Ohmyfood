@@ -58,7 +58,6 @@ a {
 
 .far {
   font-size: 30px;
-  line-height: none;
   position: relative;
   z-index: 1;
   top: 5px;
@@ -122,7 +121,7 @@ input:hover {
 
 .fonction {
   font-size: 30px;
-  font-size: bold;
+
   padding-left: 15px;
   color: black;
 }
@@ -336,6 +335,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgb(239, 238, 238);
 }
 
 .restauMenu {
@@ -599,7 +599,7 @@ h3 {
   direction: ltr;
   white-space: nowrap;
   overflow: hidden;
-  width: 288px;
+  width: 280px;
   transition: all 0.5s;
 }
 
